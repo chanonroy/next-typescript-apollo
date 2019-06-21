@@ -2,7 +2,7 @@ import { ApolloClient, NormalizedCacheObject } from "apollo-boost";
 import cookie from "cookie";
 import Head from "next/head";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { Component } from "react";
 import { getDataFromTree } from "react-apollo";
 import initApollo from "./initApollo";
 
@@ -16,7 +16,7 @@ function parseCookies(req?: any, options = {}) {
 }
 
 export default (App: any) => {
-  return class WithData extends React.Component {
+  return class WithData extends Component {
     static displayName = `WithData(${App.displayName})`;
     static propTypes = {
       apolloState: PropTypes.object.isRequired
@@ -99,3 +99,4 @@ export default (App: any) => {
       return <App {...this.props} apolloClient={this.apolloClient} />;
     }
   };
+}
