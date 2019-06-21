@@ -4,7 +4,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { getDataFromTree } from "react-apollo";
-import initApollo from "./initApollo";
+import initApollo from "../initApollo";
 
 const isBrowser = typeof window !== 'undefined';
 

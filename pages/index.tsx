@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
+import withPage from '../lib/hocs/withPage';
 
-const IndexPage: React.FunctionComponent = () => {
+const Home: FunctionComponent = () => {
   return (
     <div> Home Page </div>
   )
 }
 
-export default IndexPage;
+export default withPage()(Home);
